@@ -1,15 +1,19 @@
 # Announcement posts (launch, 2026-11-25)
 
-## X
+Published via the dissemination pipeline (Postiz, through the postiz-safe wrapper):
 
-Our agents were silently stalling — delegations sat unanswered for 16–32 hours while dashboards just reported it.
+- **LinkedIn** (Daisuke Narita) — Postiz post `cmwvw8a150nznqd07sgk8s5ep`, scheduled 2026-11-25 17:57 JST. The wrapper read the stored content back and verified the public URL survived verbatim (exit 0).
+- **X** (@diceai0) — Postiz post `cmwvw9w7s0o1jqd07o1udry37`, scheduled 2026-11-25 17:58 JST. Link-free by design: Postiz Cloud strips all URLs from X posts server-side (vendor-confirmed), so the X version names the repo as text instead of linking it.
 
-The fix: stop reporting stalls, start proving work. We adopted Beads (bd) 100% as our delegation ledger: every task is claimed atomically, heartbeats prove life, stale leases get reclaimed, and nothing counts as done without a verified artifact.
+## X (as published, link-free)
 
-We open-sourced our exact setup — skill, bootstrap, and the first run that caught 4 stalled lanes:
-https://github.com/Daisuke134/delegation-verification-beads
+Our agents were silently stalling — tasks unanswered for 16–32h while dashboards just reported it.
 
-## LinkedIn
+Fix: prove work, don't report stalls. Beads (bd) is now our delegation ledger: atomic claims, heartbeats, stale reclaim, artifact-verified closes.
+
+Open-sourced: GitHub 'delegation-verification-beads'. First run caught 4 stalled lanes.
+
+## LinkedIn (as published)
 
 We run a multi-agent company, and we had a verification problem: work delegated to named AI agents (Codex, Devin, and others) sat unanswered for up to 32 hours, while our monitoring loops merely reported the stalls.
 
